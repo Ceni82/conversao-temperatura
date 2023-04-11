@@ -1,0 +1,19 @@
+apiVersion: apps/1
+kind: ReplicaSet
+metadata:
+  name: meureplicaset
+spec:
+  selector:
+    matchLabels:
+      app: web
+template:
+
+metadata:
+  labels:
+    app: web
+spec:
+  containers:
+  - name: site
+   image: mateusceni/web-page:green
+   posts:
+   - containerPort: 80
